@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soup or Dumpling?</title>
+    <style type="text/css">body{margin:40px
+    auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0
+    10px}h1,h2,h3{line-height:1.2}
+    center{display:inline-block;margin-left:auto;margin-right:auto;width:50%;}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1> Soup or Dumpling? </h1>
+    <h3> Can't decide if that dish is soup or a dumpling? Let an AI decide for you! </h3>
+</header>
+<h1 id='ai-label'></h1>
+<!--
+  By default, we assume Ajax uploads are not supported.
+  Later we'll detect support and change this message if found.
+-->
+<p id="support-notice">Your browser does not support Ajax uploads :-(<br/>The form will be submitted as normal.</p>
+
+<!-- The form starts -->
+<form action="/" method="post" enctype="multipart/form-data" id="form-id">
+
+  <!-- The file to upload -->
+  <p><input id="file-id" type="file" name="our-file" />
+
+  <!--
+    Also by default, we disable the upload button.
+    If Ajax uploads are supported we'll enable it.
+  -->
+  <input type="button" value="Upload" id="upload-button-id" disabled="disabled" /></p>
+
+  <!-- A different field, just for the sake of the example -->
+  <p><label>URL of Image: <input name="url" type="text" id="form-url" /></label></p>
+
+  <!-- And finally a submit button -->
+  <p><input type="submit" value="Submit" /></p>
+
+
+  <!-- Placeholders for messages set by event handlers -->
+  <p id="upload-status"></p>
+  <p id="progress"></p>
+  <pre id="result"></pre>
+</form>
+<p><label>Image URL: <input type="file" id="files" /></label></p>
+<div id="list"></div>
+<div id='image'>
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename='upload.js') }}"></script>
+</body>
+</html>

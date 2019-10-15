@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soup or Dumpling?</title>
+    <style type="text/css">body{margin:40px
+    auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0
+    10px}h1,h2,h3{line-height:1.2}
+    center{display:inline-block;margin-left:auto;margin-right:auto;width:50%;}
+    </style>
+</head>
+<body>
+<header>
+    <h1> Soup or Dumpling? </h1>
+    <h3> Can't decide if your dish is soup or a dumpling? Let an AI decide for you! </h3>
+</header>
+<p><label>Image URL <input name="url" type="text" id="image-url" /></label></p>
+<input type="file" id="files" />
+<div id='image'></div>
+<h1 id='ai-label'></h1>
+<script type="text/javascript" src="{{ url_for('static', filename='upload.js') }}"></script>
+</body>
+</html>
