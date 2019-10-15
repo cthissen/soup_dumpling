@@ -4,7 +4,7 @@ from pathlib import Path
 from io import BytesIO
 import sys
 import json
-
+import urllib.request
 from fastai.vision import (
     ImageDataBunch,
     cnn_learner,
@@ -16,7 +16,10 @@ from fastai.vision import *
 from flask import Flask, render_template, request
 from pathlib import Path
 
-model_url = 'https://drive.google.com/open?id=1B7LpFWqcviYw61KZuozZouBrGMUAg49t'
+#model_url = 'https://drive.google.com/open?id=1B7LpFWqcviYw61KZuozZouBrGMUAg49t'
+model_url = 'https://drive.google.com/uc?export=download&id=1B7LpFWqcviYw61KZuozZouBrGMUAg49t'
+export_file_name = 'export.pkl'
+urllib.request.urlretrieve(model_url, export_file_name)
 
 app = Flask(__name__)
 path = Path('./')
@@ -69,5 +72,5 @@ def home():
 
 if __name__ == "__main__":
     logger.info("Starting Flask server!")
-    app.run(host='0.0.0.0', port=8008, debug=True)
+    app.run(host='0.0.0.0', port=5000)
 
