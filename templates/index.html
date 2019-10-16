@@ -18,12 +18,15 @@
         Pizza, for example, is a deconstructed dumpling. Sometimes, however, it can be difficult
         to decide whether a particular food should be classified as a soup or a dumpling. The 
         AI below uses machine learning to help you decide!</p>
+    <p> Simply upload an image </p>
 </header>
-<p><label>Image URL <input name="url" type="text" id="image-url" /></label></p>
-<p>Example: https://www.inspiredtaste.net/wp-content/uploads/2018/10/Homemade-Vegetable-Soup-Recipe-2-1200.jpg</p>
 <input type="file" id="files" />
-<div id='image'></div>
+    <p> Or paste in a url (and hit enter) </p>
+<p><label>Image URL <input name="url" type="text" id="image-url" /></label></p>
+<p>Try this url to start: https://www.inspiredtaste.net/wp-content/uploads/2018/10/Homemade-Vegetable-Soup-Recipe-2-1200.jpg</p>
+<p>This AI was trained using the PyTorch FastAI library in a <a href=""> jupyter notebook </a></p>
 <h1 id='ai-label'></h1>
+<div id='image'></div>
 <script type="text/javascript" src="{{ url_for('static', filename='upload.js') }}"></script>
 </body>
 </html>

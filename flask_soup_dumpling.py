@@ -19,7 +19,11 @@ from pathlib import Path
 #model_url = 'https://drive.google.com/open?id=1B7LpFWqcviYw61KZuozZouBrGMUAg49t'
 model_url = 'https://drive.google.com/uc?export=download&id=1B7LpFWqcviYw61KZuozZouBrGMUAg49t'
 export_file_name = 'export.pkl'
-urllib.request.urlretrieve(model_url, export_file_name)
+try:
+    urllib.request.urlretrieve(model_url, export_file_name)
+except urllib.error.URLError:
+    print('errr')
+    pass
 
 app = Flask(__name__)
 path = Path('./')
