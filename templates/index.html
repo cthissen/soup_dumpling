@@ -14,10 +14,10 @@
 <body>
 <header>
     <h1> Soup or Dumpling? </h1>
-    <p>The soup or dumpling hypothesis posits that all dished can be classified as variations on a soup or variations on a dumpling. 
+    <p>The soup or dumpling hypothesis posits that all dishes can be classified as variations on soup or dumplings. 
         Pizza, for example, is a deconstructed dumpling. Sometimes, however, it can be difficult
-        to determine whether a particular food should be classified as a soup or a dumpling. The 
-        AI below uses machine learning to help you decide!</p>
+        to determine whether a particular dish should be classified as a soup or a dumpling. The 
+        AI below uses machine learning to classify any dish as a soup or a dumpling.</p>
 </header>
 <p> Simply upload an image. </p>
 <p> (If you don't get a response try a smaller image size. This is running on a tiny server!)</p>
@@ -30,13 +30,13 @@
 <div id='image'></div>
 <script type="text/javascript" src="{{ url_for('static', filename='upload.js') }}"></script>
 <h3> Why an AI? </h3>
-<p> The soup-dumpling hypothesis currently lacks a principled theory as what makes a dish either a soup or dumpling. 
-To date, all theories put forth (e.g, topological agruments) have not been well accepted in the community. Current 
-practice is to debate each example individually. By training an AI to classify soups vs dumplings using 
-well-accepted examples, the AI should learn to generalize to other foods that are more contentious. While this
-does not generate a principled theory, the AI may learn to empirically draw the boundary between soups and dumplings, should
-such a boundary exist. 
-</p>
+<p> The soup-dumpling hypothesis currently lacks a principled theory about what
+makes a dish either a soup or dumpling.  To date, all theories put forth (e.g,
+topological agruments) have not been well accepted in the community. By
+training an AI against well-accepted examples, the AI should learn to
+generalize to other foods that are more contentious. While this does not
+generate a principled theory, the AI may learn to empirically draw the boundary
+between soups and dumplings, should such a boundary exist.  </p>
 
 </body>
 </html>
