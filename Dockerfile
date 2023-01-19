@@ -4,13 +4,13 @@ RUN apt update
 RUN apt install -y python3-dev gcc git
 
 # Install pytorch and fastai
-RUN pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
+#RUN pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
 #RUN pip install fastai
-RUN git clone https://github.com/fastai/fastai
-WORKDIR fastai
-RUN tools/run-after-git-clone
-RUN pip install -e ".[dev]"
-WORKDIR /
+#RUN git clone https://github.com/fastai/fastai
+#WORKDIR fastai
+#RUN tools/run-after-git-clone
+#RUN pip install -e ".[dev]"
+#WORKDIR /
 
 # Install starlette and uvicorn
 RUN pip install starlette uvicorn python-multipart aiohttp
@@ -29,5 +29,6 @@ ADD static static
 
 EXPOSE 8008
 
+RUN pip install fastai==1.0.61
 # Start the server
 CMD ["python", "flask_soup_dumpling.py", "serve"]
